@@ -2,7 +2,9 @@
 
 A Python automation project using Pytest and Playwright for end-to-end and API testing of a sample e-commerce web application.
 
+
 ## Project Structure
+
 
 ```
 PytestProject_2/
@@ -42,6 +44,41 @@ PytestProject_2/
 ├── test_login_swag.py         # UI test: login scenarios
 └── ...                        # Other test files and cache folders
 ```
+
+## List of Tests
+
+### test_login_swag.py
+- test_T001_loginValid(page)
+- test_T002_errorlogin(page)
+- test_T003_lockedlogin(page)
+- test_T004_passwordlogin(page)
+- test_T005_missinglogin(page)
+- test_006_logoutflow(page)
+
+### test_inventory_swag.py
+- logged_in_page(page)  *(fixture)*
+- test_010_inventoryCount(logged_in_page)
+- test_011_add_to_cart(logged_in_page)
+- test_012_addRemove(logged_in_page)
+- test_013_sortPrice(logged_in_page)
+- test_014_itemPage(logged_in_page)
+
+### test_cart_checkout_swag.py
+- logged_in_page(page)  *(fixture)*
+- test_020_inventoryCount(logged_in_page)
+- test_021_removeFromCart(logged_in_page)
+- test_022_goCheckout(logged_in_page)
+- test_023_missingCheckout(logged_in_page)
+- test_024_fullFlow(logged_in_page)
+
+### pageObjects/api_tests/test_030_order_api.py
+- test_e2e_web_api(playwright)
+
+### pageObjects/api_tests/test_031_countProducts.py
+- test_countProducts(playwright)
+
+### pageObjects/api_tests/test_032_priceMatch.py
+- *(No test functions found)*
 
 ## Key Features
 - UI automation with Playwright (Python)
