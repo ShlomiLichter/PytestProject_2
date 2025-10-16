@@ -97,7 +97,7 @@ PytestProject_2/
 2. Configure your test data in `data/credentials.json`.
 3. Run tests:
    ```sh
-   pytest
+   pytest -v --html=report.html
    ```
 
 ## Author
