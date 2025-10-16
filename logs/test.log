@@ -1,0 +1,10 @@
+INFO     root:cartPage.py:17 Sauce Labs Bolt T-Shirt is visiable
+INFO     root:cartPage.py:20 Sauce Labs Fleece Jacket is visiable
+INFO     root:cartPage.py:23 Sauce Labs Onesie is visiable
+INFO     root:cartPage.py:26 Bike Light is visiable
+INFO     root:cartPage.py:36 Two items are visiable
+INFO     root:cartPage.py:40 One items are visiable
+INFO     root:checkout_step_one_page.py:16 Checkout: Your Information
+INFO     root:checkout_step_one_page.py:22 Error: First Name is required
+INFO     root:checkout_complete_page.py:9 Thank you for your order!
+INFO     root:inventoryItemPage.py:10 Sauce Labs Backpack
