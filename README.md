@@ -80,6 +80,54 @@ PytestProject_2/
 ### pageObjects/api_tests/test_032_priceMatch.py
 - *(No test functions found)*
 
+## Playwright MCP Generated Tests
+
+### playwright_tests/test_saucedemo_login.py
+Data-driven login test for https://www.saucedemo.com created using **Playwright MCP** (Model Context Protocol):
+
+- **test_data_driven_login_all_users()** — Tests all available user accounts by:
+  - Dynamically scraping usernames and password from the saucedemo main page
+  - Attempting login for each username
+  - Verifying successful redirect to inventory page
+  - Handling expected failures (e.g., `locked_out_user` is intentionally locked)
+
+**Test Results:** 5 successful logins + 1 expected block = ✅ PASSED
+
+**Features:**
+- Real-time browser visualization (non-headless mode)
+- Detailed console logging showing each login attempt
+- Automatic credential extraction from the application
+- No hardcoded test data required
+
+For details, see `playwright_tests/README.md`
+
+### test_e2e_saucedemo_checkout.py
+Complete end-to-end checkout flow test for SauceDemo created using **Playwright MCP**:
+
+- **test_e2e_checkout_flow()** — Full e-commerce transaction test including:
+  - Login with `standard_user` / `secret_sauce`
+  - Add "Sauce Labs Backpack" to cart
+  - Verify product in cart
+  - Complete checkout with personal information (Shlomi Lichter, Zip: 70700)
+  - Verify product on checkout review page
+  - Confirm order completion with "Thank you for your order!" message
+
+**Test Results:** ✅ PASSED in 15.29 seconds
+
+**Features:**
+- Complete user journey from login to order confirmation
+- Step-by-step console logging with visual indicators (✅/❌)
+- URL verification at each checkpoint
+- Element visibility validation
+- pytest fixtures for browser management
+
+Run with:
+```sh
+pytest test_e2e_saucedemo_checkout.py -v -s
+```
+
+For details, see `E2E_CHECKOUT_TEST_SUMMARY.md`
+
 ## Key Features
 - UI automation with Playwright (Python)
 - API testing with requests and Playwright APIRequestContext
